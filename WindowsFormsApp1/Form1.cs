@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
 				CheckFileExists = true,
 				CheckPathExists = true
 			};
-			ofd.ShowDialog();
+			if (ofd.ShowDialog() == DialogResult.Cancel) return;
 			Bitmap img = new Bitmap(ofd.FileName);
 			int width = img.Width / 7;
 			int height = img.Height / 3;
